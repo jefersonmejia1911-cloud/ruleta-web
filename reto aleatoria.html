@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Generador de Retos Aleatorios</title>
+    <style>
+        title{
+            color: #FFDB58;
+        }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: black;
+            color: #FFDB58;
+        }
+        button {
+            padding: 15px 10px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: black;
+            color: #FFDB58;
+            border-color: #FFDB58;
+            border-radius: 25px;
+        }
+        #resultadoReto {
+            font-size: 18px;
+            color: #FFDB58;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHZSwuaJJo1c3QDPa4XoWEI436N5T8H9DoPwOpab-4MCfcElGLxI_QeSiAd_qC7F8AGVAfLCRT8HL4DS5nywgea0m2-ki5ocOPHBQZHKqNIQTvwirimmqBQ1CdGjSCMJgH_e94Kv1Ipqm-ELsxHPuOwDyYvYxgPlnsrSvgbNxuxOI9a1QQx7NUqTJDCDUC/s1600/LOGO.png">
+
+    <h1>Generador de Retos</h1>
+
+    <button onclick="generarReto()">Encuentra tu Reto</button>
+
+    <p>¡El Reto es!:</p>
+    <div id="resultadoReto">-----</div>
+
+    <script>
+        // 1. Definición de las variables de los retos
+        const reto1 = "Tomale una foto a un objeto que sea de color azul.";
+        const reto2 = "Haz una foto que transmita alegria.";
+        const reto3 = "Encuentra una imagen que te recuerde algún momento de tu vida.";
+        const reto4 = "Encuentra una foto que te transmita comodidad.";
+        const reto5 = "Piensa en una palabra, luego busca la foto que la represente.";
+        const reto6 = "Busca dos fotos que parezcan tener una conversación entre ellas.";
+        const reto7 = "Tómate un momento para mirar el suelo y fotografiar lo más inesperado que encuentres ah (p. ej., una tapa de alcantarilla interesante, una hoja de forma extraña, una grieta).";
+        const reto8 = "Encuentra y fotografía tres cosas idénticas o muy similares que estén juntas (p. ej., tres frutas, tres herramientas, tres coches).";
+        const reto9 = "Fotografía tu lugar favorito del recorrido, intentando capturar por qué te sientes bien allí.";
+        const reto10 = "Utiliza una ventana o un marco de puerta como si fuera un marco de foto y captura lo que se ve a través de él.";
+        const reto11 = "Espera a que la luz sea suave y dorada (poco antes del atardecer) y fotografía el objeto más cercano que esté siendo iluminado por esa luz.";
+        const reto12 = "Escoge mentalmente un color brillante (ej. verde limón, fucsia, turquesa) y sal a buscar un objeto que sea exclusivamente de ese color.";
+        const reto13 = "Busca y fotografía un paisaje Urbano";
+        const reto14 = "Busca y fotografía un cartel, anuncio o grafiti que esté parcialmente dañado, desgarrado o descolorido, capturando la historia de la calle.";
+        const reto15 = "Tómale una foto a un grupo de cables, postes de luz o líneas eléctricas que crucen el cielo de forma caótica o geométrica.";
+
+        function generarReto() {
+            // 2. Generar el número aleatorio del 1 al 5
+            const numeroAleatorio = Math.floor(Math.random() * 15) + 1;
+
+            let retoSeleccionado = "";
+
+            // 4. Seleccionar el reto basándose en el número
+            switch (numeroAleatorio) {
+                case 1:
+                    retoSeleccionado = reto1;
+                    break;
+                case 2:
+                    retoSeleccionado = reto2;
+                    break;
+                case 3:
+                    retoSeleccionado = reto3;
+                    break;
+                case 4:
+                    retoSeleccionado = reto4;
+                    break;
+                case 5:
+                    retoSeleccionado = reto5;
+                    break;
+                case 6:
+                    retoSeleccionado = reto6;
+                    break;
+                case 7:
+                    retoSeleccionado = reto7;
+                    break;
+                case 8:
+                    retoSeleccionado = reto8;
+                    break;
+                case 9:
+                    retoSeleccionado = reto9;
+                    break;
+                case 10:
+                    retoSeleccionado = reto10;
+                    break;
+                case 11:
+                    retoSeleccionado = reto11;
+                    break;
+                case 12:
+                    retoSeleccionado = reto12;
+                    break;
+                case 13:
+                    retoSeleccionado = reto13;
+                    break;
+                case 14:
+                    retoSeleccionado = reto14;
+                    break;
+                case 15:
+                    retoSeleccionado = reto15;
+                    break;
+                default:
+                    retoSeleccionado = "Error: Número no válido.";
+            }
+
+            // 5. Imprimir/Mostrar el valor de la variable del reto
+            document.getElementById('resultadoReto').textContent = retoSeleccionado;
+
+
+        }
+    </script>
+
+    <p>Comparte tus fotos y tu experiencia con nosotros</p>
+    <div id="enviarreto"></div>
+    <button onclick="redirigir()">
+    Envia tu Foto
+    </button>
+
+    <script>
+      function redirigir() {
+        // Reemplaza 'URL_DEL_ENLACE' con el enlace que deseas abrir.
+        window.open('https://chat.whatsapp.com/CKQN6aBcahi1FGuellcXma', '_blank'); 
+        // Si quieres que se abra en una pestaña nueva, cambia '_self' por '_blank'.
+      }
+    </script>
+
+</body>
+</html>
